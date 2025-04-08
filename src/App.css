@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ensure the mobile menu covers the screen */
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Sidebar for desktop */
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 4rem; /* Push sidebar below the header */
+    left: 0;
+    height: 100%;
+    width: 25%; /* Adjust width as needed */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Header for desktop */
+@media (min-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3b82f6; /* Blue background */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the logo */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    height: 4rem; /* Set a fixed height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .header img {
+    height: 2rem; /* Adjust logo size */
+    background-color: yellowgreen;
+  }
+}
+
+/* Adjust logo size and alignment */
+img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Dark mode styles */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+.dark {
+  --bg-color: #1a202c;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
