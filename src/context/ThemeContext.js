@@ -9,13 +9,12 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add("dark"); // Apply to <html>
       localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("dark"); // Remove from <html>
       localStorage.setItem("theme", "light");
     }
-    // No cleanup needed
   }, [darkMode]);
 
   return (

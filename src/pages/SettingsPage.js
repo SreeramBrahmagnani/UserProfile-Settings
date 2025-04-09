@@ -77,22 +77,8 @@ const SettingsPage = () => {
   return (
     <div className="bg-white dark:bg-gray-800 p-6 rounded shadow-md text-black dark:text-white">
       <h2 className="text-2xl font-bold mb-4">Settings</h2>
-
-      {/* Theme Toggle */}
-      <div className="flex items-center justify-between mb-6">
-        <span className="font-medium">Theme:</span>
-        <button
-          onClick={toggleTheme}
-          className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 flex items-center gap-2"
-          aria-label="Toggle Theme"
-        >
-          {darkMode ? <Sun size={16} /> : <Moon size={16} />}
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-      </div>
-
-      {/* Language Switcher */}
-      <div className="flex items-center justify-between mb-6">
+        {/* Language Switcher */}
+        <div className="flex items-center justify-between mb-6">
         <label className="font-medium" htmlFor="language-dropdown">
           Change Language:
         </label>
@@ -103,6 +89,21 @@ const SettingsPage = () => {
         />
       </div>
 
+      {/* Theme Toggle */}
+      <div className="flex items-center justify-between mb-6">
+        <span className="font-medium">Theme:</span>
+        <button
+          onClick={toggleTheme}
+          className="px-6 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 flex items-center gap-2"
+          aria-label="Toggle Theme"
+        >
+          {darkMode ? <Sun size={16} /> : <Moon size={16} />}
+          {darkMode ? " Light" : " Dark"}
+        </button>
+      </div>
+
+
+
       {/* Change Password */}
       <div className="flex items-center justify-between mb-6">
         <span className="font-medium">Change Password:</span>
@@ -111,16 +112,17 @@ const SettingsPage = () => {
           className="px-4 py-2 rounded bg-yellow-500 text-white hover:bg-yellow-600 flex items-center gap-2"
         >
           <Lock size={16} />
-          Change Password
+          Change
         </button>
       </div>
+          
 
       {/* Logout Account */}
       <div className="flex items-center justify-between mb-6">
         <span className="font-medium">Logout Account:</span>
         <button
           onClick={handleLogout}
-          className="px-4 py-2 rounded bg-red-500 text-white hover:bg-red-600 flex items-center gap-2"
+          className="px-5 py-2 rounded bg-red-500 text-white hover:bg-red-600 flex items-center gap-2"
         >
           <LogOut size={16} />
           Logout
@@ -132,7 +134,7 @@ const SettingsPage = () => {
         <span className="font-medium">Delete Account:</span>
         <button
           onClick={handleDeleteAccount}
-          className="px-4 py-2 rounded bg-red-700 text-white hover:bg-red-800 flex items-center gap-2"
+          className="px-5 py-2 rounded bg-red-700 text-white hover:bg-red-800 flex items-center gap-2"
         >
           <Trash2 size={16} />
           Delete
