@@ -34,7 +34,7 @@ const LanguageDropdown = ({ id, onSelect }) => {
   return (
     <div className="relative">
       <button
-        id={id} // Add id for accessibility
+        id={id}
         onClick={() => setOpen(!open)}
         className="px-4 py-2 border rounded bg-white dark:bg-gray-700 text-black dark:text-white w-full"
       >

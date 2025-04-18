@@ -16,43 +16,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* 🧼 Hide Google Translate toolbar, branding, and combo dropdown */
-.goog-te-banner-frame.skiptranslate,
-.goog-logo-link,
-.goog-te-gadget span,
-.goog-te-gadget,
-iframe.goog-te-banner-frame,
-#google_translate_element span {
+.goog-te-banner-frame {
+  position: static !important;
+  top: auto !important;
+  z-index: 999999 !important; /* Adjust if needed */
+}
+
+/* Optionally hide the top banner */
+.skiptranslate {
   display: none !important;
 }
 
-/* 🎨 Modern & Clean Dropdown Styling */
-#google_translate_element select.goog-te-combo {
-  background-color: #f0f4f8; /* light blue */
-  border: 1px solid #cbd5e1; /* border-gray-300 */
-  border-radius: 0.5rem;     /* rounded-md */
-  padding: 0.5rem 2.5rem 0.5rem 1rem; /* spacious padding */
-  font-size: 0.875rem;       /* text-sm */
-  color: #1f2937;            /* text-gray-800 */
-  font-family: inherit;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* soft shadow */
-  appearance: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Hover effect */
-#google_translate_element select.goog-te-combo:hover {
-  background-color: #e0f2fe; /* light blue hover */
-  border-color: #3b82f6;     /* blue-500 */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f2937'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1rem;
-}
-
-/* Focus ring */
-#google_translate_element select.goog-te-combo:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* blue ring */
+/* Fix for the language selector dropdown */
+.goog-te-menu-frame {
+  position: absolute !important;
+  z-index: 1000000 !important; /* Make sure it's above other elements */
 }
